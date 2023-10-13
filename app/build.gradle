@@ -36,9 +36,9 @@ android {
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.github.Jay-huangjie.base:core:1.3'
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.github.chenBingX:SuperTextView:3.2.5.99'
     implementation 'org.litepal.android:java:3.0.0'  //添加依赖
+    implementation project(':core')
 }
