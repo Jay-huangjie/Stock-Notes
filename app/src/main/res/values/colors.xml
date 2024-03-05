@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--主题色-->
-    <color name="theme_color_primary">#07C15F</color>
-    <color name="colorPrimary">#07C15F</color>
-    <color name="colorPrimaryDark">#07C15F</color>
-    <color name="colorAccent">#07C15F</color>
+    <color name="theme_color_primary">#F24535</color>
+    <color name="colorPrimary">#F24535</color>
+    <color name="colorPrimaryDark">#F24535</color>
+    <color name="colorAccent">#F24535</color>
+    <color name="ic_launcher_background">#F24535</color>
+
+    <color name="colorDark">#E02D24</color>
+
+    <color name="line_bg">#e5e5e5</color>
+    <color name="gray_cc">#cccccc</color>
+    <color name="gray_ee">#eeeeee</color>
+    <color name="about_bg">#066EB1</color>
+    <color name="white">#ffffff</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_dddddd">#dddddd</color>
+    <color name="color_505050">#505050</color>
+    <color name="color_909090">#909090</color>
+    <color name="color_1e1e1e">#1e1e1e</color>
+    <color name="color_4b4b4b">#4b4b4b</color>
+    <color name="app_color_blue_2">#31BDF3</color>
+    <color name="normalView">#E5E5E5</color>
+    <color name="tab_indicator_color">#ff7b16</color>
+    <color name="tab_indicator_bg_color">#a1a1a1</color>
+    <color name="tab_default_text_color">#363636</color>
+    <color name="tab_default_divider_color">#595959</color>
+    <color name="main_bg">#F6F7FC</color>
+
+    <color name="black">#000000</color>
+
+    <color name="color_323232">#323232</color>
 </resources>

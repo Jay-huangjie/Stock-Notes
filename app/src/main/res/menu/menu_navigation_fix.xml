@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_logic"
+        android:checked="true"
+        android:icon="@drawable/icon_logic"
+        android:title="@string/logic" />
+    <item
+        android:id="@+id/action_selected"
+        android:icon="@drawable/icon_selected"
+        android:title="@string/selected" />
+    <item
+        android:id="@+id/action_ai"
+        android:icon="@drawable/icon_ai"
+        android:title="@string/ai" />
+    <item
+        android:id="@+id/action_mine"
+        android:icon="@drawable/icon_mine"
+        android:title="@string/mine" />
+</menu>
