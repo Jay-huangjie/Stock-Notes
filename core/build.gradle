@@ -4,10 +4,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    namespace 'com.jay.core'
+    compileSdk rootProject.ext.android.compileSdkVersion
     defaultConfig {
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        minSdk rootProject.ext.android.minSdkVersion
+        targetSdk rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
     }
@@ -19,16 +20,22 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     buildFeatures{
         dataBinding = true
     }
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+        }
+    }
 }
 
 dependencies {
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
     implementation 'androidx.appcompat:appcompat:1.2.0'
     api 'com.blankj:utilcodex:1.31.1'
     api 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'

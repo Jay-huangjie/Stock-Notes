@@ -3,12 +3,13 @@ plugins {
 }
 
 android {
-    compileSdk 33
+    namespace 'com.jay.stock'
+    compileSdk rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
         applicationId "com.jay.stock"
-        minSdk 23
-        targetSdk 33
+        minSdk rootProject.ext.android.minSdkVersion
+        targetSdk rootProject.ext.android.targetSdkVersion
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -21,8 +22,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     sourceSets {
         main {
@@ -35,11 +36,15 @@ android {
 }
 
 dependencies {
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.0'
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.github.chenBingX:SuperTextView:3.2.5.99'
-    implementation 'org.litepal.android:java:3.0.0'  //添加依赖
+    var wcdb_version = "2.1.4"
+    implementation("com.tencent.wcdb:main:$wcdb_version")
+    implementation("com.tencent.wcdb:annotation:$wcdb_version")
+    annotationProcessor("com.tencent.wcdb:compiler:$wcdb_version")
     implementation project(':core')
 }

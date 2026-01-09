@@ -26,7 +26,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     private AiFragment aiFragment;
     private MineFragment mineFragment;
 
-
     @Override
     public int getRootViewId() {
         return R.layout.activity_main;
@@ -44,19 +43,14 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                switch (id) {
-                    case R.id.action_logic:
-                        showLogicFragment();
-                        break;
-                    case R.id.action_selected:
-                        showSelectFragment();
-                        break;
-                    case R.id.action_ai:
-                        showAiFragment();
-                        break;
-                    case R.id.action_mine:
-                        showMineFragment();
-                        break;
+                if (id == R.id.action_logic) {
+                    showLogicFragment();
+                } else if (id == R.id.action_selected) {
+                    showSelectFragment();
+                } else if (id == R.id.action_ai) {
+                    showAiFragment();
+                } else if (id == R.id.action_mine) {
+                    showMineFragment();
                 }
                 return true;
             }

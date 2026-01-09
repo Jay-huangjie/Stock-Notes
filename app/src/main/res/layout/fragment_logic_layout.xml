@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -14,26 +15,23 @@
         android:background="@color/main_bg"
         android:orientation="vertical">
 
-        <FrameLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:background="@color/theme_color_primary">
+            android:layout_height="?attr/actionBarSize"
+            app:title="逻辑梳理"
+            android:background="@color/theme_color_primary"
+            app:titleTextColor="@color/white" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="逻辑梳理"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+        <com.jay.stock.main.componse.AutoRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="right|center_vertical"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/icon_search" />
-
-        </FrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.jay.stock.main.componse.AutoRefreshLayout>
     </LinearLayout>
 </layout>

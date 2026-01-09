@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.jay.stock.main.logic.AddNoteActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/theme_color_primary"
+            app:title="添加笔记"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/icon_back_white" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:padding="16dp"
+            android:hint="请输入逻辑内容..."
+            android:background="@null"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</layout>

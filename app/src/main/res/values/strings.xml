@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">股票分析助手</string>
     <string name="logic">逻辑</string>
-    <string name="selected">自选股</string>
+    <string name="selected">股票跟踪</string>
     <string name="ai">AI</string>
     <string name="mine">我的</string>
 </resources>
